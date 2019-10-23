@@ -1,0 +1,45 @@
+{
+  "type": "record",
+  "namespace": "kafka.commande.messages.Schemas",
+  "name": "Event",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "date",
+      "type": "string"
+    },
+    {
+      "name": "message",
+      "type": {
+        "type": "record",
+        "name": "Message",
+        "fields": [
+          {
+            "name": "header",
+            "type": {
+              "type": "record",
+              "name": "Header",
+              "fields": [
+                {
+                  "name": "msg_id",
+                  "type": "string"
+                },
+                {
+                  "name": "msg_date",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Body",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

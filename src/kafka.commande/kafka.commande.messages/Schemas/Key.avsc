@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "namespace": "kafka.commande.messages.Schemas",
+  "name": "Key",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    }
+  ]
+}
